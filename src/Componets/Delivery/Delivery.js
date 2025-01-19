@@ -115,7 +115,7 @@ const Delivery = () => {
     SetSortedDistance(sortedData);
     setcheckflag(false);
 
-    const newSocket = io("http://localhost:8000");
+    const newSocket = io("https://backend-product-tracking.vercel.app");
     setSocket(newSocket);
 
     console.log("Connecting to WebSocket");

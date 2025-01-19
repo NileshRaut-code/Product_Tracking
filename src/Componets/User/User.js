@@ -23,7 +23,7 @@ const User = () => {
     
     
     useEffect(() => {
-        const socket = io("http://localhost:8000");
+        const socket = io("https://backend-product-tracking.vercel.app");
 
         console.log("Tracking ID:", tracking_id);
         
