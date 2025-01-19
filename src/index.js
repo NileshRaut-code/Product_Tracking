@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import appstore from './Utils/store.js';
-import Home from "./Componets/Home.js"
-import ProblemPage from "./Componets/leetcode.js"
-import Mainprofile from './Componets/Mainprofile.js';
-import { Problems } from './Componets/Problems.js';
+import User from './Componets/User/User.js';
+import Delivery  from './Componets/Delivery/Delivery.js';
+import Home from './Componets/Home.js';
+
+import SalesDash from './Componets/SalesDash.js'; // New import
 
 const route=new createBrowserRouter([
   {
@@ -19,21 +20,22 @@ const route=new createBrowserRouter([
       path:"",
       element:<Home/>
   
-    },
-    {
-      path:"/p/:id",
-      element:<Mainprofile/>
-  
-    },  {
-      path:"/problems",
-      element:<Problems/>
+    },{
+      path:"/user",
+      element:<User/>
   
     },
+   
     {
-      path:"/problem/:id",
-      element:<ProblemPage/>
+      path:"/delivery",
+      element:<Delivery/>
   
-    },]
+    },
+  
+    {
+      path:"/dashboard/sales",
+      element:<SalesDash/> // New route
+    }]
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -47,7 +49,4 @@ root.render(
   // <App/>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
