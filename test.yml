@@ -1,0 +1,13 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 10
+      arrivalRate: 100
+scenarios:
+  - flow:
+      - post:
+          url: "/send"
+          json:
+            name: "username"
+            year: "js"
+            language: "2+2"
