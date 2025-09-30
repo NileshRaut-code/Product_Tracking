@@ -115,7 +115,7 @@ const Delivery = () => {
     SetSortedDistance(sortedData);
     setcheckflag(false);
 
-    const newSocket = io(`{process.env.REACT_APP_URL}`);
+    const newSocket = io(`${process.env.REACT_APP_URL}`);
     setSocket(newSocket);
 
     console.log("Connecting to WebSocket");
