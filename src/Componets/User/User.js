@@ -23,7 +23,7 @@ const User = () => {
     
     
     useEffect(() => {
-        const socket = io(`{process.env.REACT_APP_URL}`);
+        const socket = io(`${process.env.REACT_APP_URL}`);
 
         console.log("Tracking ID:", tracking_id);
         
