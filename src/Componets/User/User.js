@@ -23,7 +23,7 @@ const User = () => {
     
     
     useEffect(() => {
-        const socket = io("https://backend-product-tracking.vercel.app");
+        const socket = io(`{process.env.REACT_APP_URL}`);
 
         console.log("Tracking ID:", tracking_id);
         
