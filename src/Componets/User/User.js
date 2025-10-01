@@ -32,7 +32,7 @@ const User = () => {
     ws.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data);
-        if (data.type === 'gps_user_recive') {
+       if (data.type === 'gps_user_receive') {
           const latlng = [data.gps.latitude, data.gps.longitude];
           console.log("GPS Update:", latlng);
           setPosition(latlng);
